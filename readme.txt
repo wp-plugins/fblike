@@ -1,17 +1,16 @@
 === Plugin Name ===
 Contributors: ansimation
-Tags: facebook, social, fb, recommend, like, share
+Tags: facebook, social, fb, recommend, like, share, facebook like, open graph, opengraph, like button, fb like, facebook share
 Requires at least: 2.9
 Tested up to: 3.0
 Stable tag: 1.2
-Donate Link:
-Add the facebook like button to posts
+Donate Link: http://www.visitfloridastateparks.com/donate/
+
 
 == Description ==
 
-Add Facebook Like button to your posts. Configurable options for layout style, show faces, width, display verb ( like/recommend ), font, and color scheme.
-Allows you to select between IFrame & XFBML output methods, adds a new button to tinymce that pops up a dialog to help you configure your shortcode.
-Comment form does appear when using the XFBML method.
+One of the best Facebook Like Plugins for WordPress out there. Add Facebook Like button to your posts. Configurable options allow you to select between IFrame & XFBML output methods, 
+Select where to display your Like button. Adds a new button to TinyMCE that pops up a dialog to help you configure your shortcode. Comment form does appear when using the XFBML method.
 
 == Installation ==
 
