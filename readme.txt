@@ -9,9 +9,9 @@ Add the facebook like button to posts
 
 == Description ==
 
-Add Facebook Like button to your posts. Configurable options for layout style, show faces, width, display verb ( like/recommend ), font, and color scheme.,
-i will be adding a shortcode and a function here soon to make the plugin more useful in more situations. Currently we do not use the XFBML method for
-implementing this. If there's a request for it i might consider it in a future release.
+Add Facebook Like button to your posts. Configurable options for layout style, show faces, width, display verb ( like/recommend ), font, and color scheme.
+Allows you to select between IFrame & XFBML output methods, adds a new button to tinymce that pops up a dialog to help you configure your shortcode.
+Comment form does appear when using the XFBML method.
 
 == Installation ==
 
@@ -29,7 +29,10 @@ Thanks
 Yes.
 
 = XFBML doesn't load the Facebook JavaScript SDK =
-Check that your theme calls wp_footer() or do_action('wp_footer')
+Check that your theme calls wp_footer() or do_action('wp_footer') and that 'Include JavaScript SDK' is checked.
+
+= Comment form does not appear with XFBML output =
+By default, the container css is set to a height of 25 pixels. Change this to 135 pixels or greater and you should see the comment form so long as your App ID is valid.
 
 = XFBML output doesn't work =
 Check that your theme calls wp_footer() or do_action('wp_footer') and that you have entered a valid App ID on the plugin options page.
