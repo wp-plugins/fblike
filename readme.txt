@@ -1,11 +1,11 @@
 === Plugin Name ===
 Contributors: ansimation
-Tags: facebook, social, fb, recommend, like, share
+Tags: facebook, social, fb, recommend, like, share, facebook like, open graph, like button, fb like, facebook share
 Requires at least: 2.9
 Tested up to: 3.0
 Stable tag: 1.2
-Donate Link:
-Add the facebook like button to posts
+Donate Link:http://www.visitfloridastateparks.com/donate/
+
 
 == Description ==
 
