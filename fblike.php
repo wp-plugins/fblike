@@ -12,11 +12,10 @@
     /**
     *   TODO:
     *
-    *   [x] Show on RSS Feeds
     *   [x] Show on Archive Pages
+    *   [x] Add support for the_excerpt
     *   [ ] Get thumbnail uploader working. need to find a way to use my own send_to_editor func
     *   [ ] Work on comment form showing out of container. lose container?
-    *   [x] Add support for the_excerpt
     */
 
     class FBLike
