@@ -9,7 +9,7 @@ Donate Link: http://www.visitfloridastateparks.com/donate/
 
 == Description ==
 
-One of the best Facebook Like Plugins for WordPress out there. Add Facebook Like button to your posts. Configurable options allow you to select between IFrame & XFBML output methods, 
+One of the best Facebook Like Plugins for WordPress out there. Add Facebook Like button to your posts. Configurable options allow you to select between IFrame & XFBML output methods,
 Select where to display your Like button. Adds a new button to TinyMCE that pops up a dialog to help you configure your shortcode. Comment form does appear when using the XFBML method.
 
 == Installation ==
@@ -37,6 +37,11 @@ By default, the container css is set to a height of 25 pixels. Change this to 13
 Check that your theme calls wp_footer() or do_action('wp_footer') and that you have entered a valid App ID on the plugin options page.
 
 == Changelog ==
+
+= 1.3 =
+* Added option to display on search results page
+* Added option to display on archive pages
+* Added option to display on excerpts
 
 = 1.2 =
 * Added support to select display on individual posts, pages, or home page
