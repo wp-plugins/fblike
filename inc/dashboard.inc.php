@@ -104,6 +104,24 @@
                 </td>
             </tr>
             <tr valign="top">
+                <th scope="row"><label for="show-on-archives">Show on archive pages:</label></th>
+                <td>
+                    <input type="checkbox" name="fblike[show_on_archives]" id="show-on-archives"<?php checked('on', $options['show_on_archives'] ); ?> />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row"><label for="show-on-search">Show on search results:</label></th>
+                <td>
+                    <input type="checkbox" name="fblike[show_on_search]" id="show-on-search"<?php checked('on', $options['show_on_search'] ); ?> />
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row"><label for="show-on-excerpts">Show on excerpts:</label></th>
+                <td>
+                    <input type="checkbox" name="fblike[show_on_excerpts]" id="show-on-excerpts"<?php checked('on', $options['show_on_excerpts'] ); ?> />
+                </td>
+            </tr>
+            <tr valign="top">
                 <th scope="row"><label for="container-css">Container Inline CSS Style:</label></th>
                 <td>
                     <input type="text" name="fblike[container_css]" id="container-css" value="<?php echo $this->options['container_css']; ?>" size="35" />

@@ -6,8 +6,18 @@
      *  Plugin URI: http://travisballard.com/wordpress/fblike-wordpress-plugin/
      *  Author: Travis Ballard
      *  Author URI: http://www.travisballard.com
-     *  Version: 1.2
+     *  Version: 1.3
      */
+
+    /**
+    *   TODO:
+    *
+    *   [x] Show on RSS Feeds
+    *   [x] Show on Archive Pages
+    *   [ ] Get thumbnail uploader working. need to find a way to use my own send_to_editor func
+    *   [ ] Work on comment form showing out of container. lose container?
+    *   [x] Add support for the_excerpt
+    */
 
     class FBLike
     {
@@ -36,6 +46,9 @@
                 'show_on_home' => 'on',
                 'show_on_pages' => 'on',
                 'show_on_posts' => 'on',
+                'show_on_archives' => 'on',
+                'show_on_search' => 'on',
+                'show_on_excerpts' => 'on',
 
                 # additional meta on individual posts
                 'use_meta' => 'on',
@@ -124,15 +137,53 @@
         {
             # show on home page?
             if( is_front_page() && isset( $this->options['show_on_home'] ) && $this->options['show_on_home'] == 'on' )
-                add_action( 'the_content', array( &$this, 'add_fblike' ) );
+            {
+                add_filter( 'the_content', array( &$this, 'add_fblike' ) );
+
+                # excerpts?
+                if( isset( $this->options['show_on_excerpts'] ) && $this->options['show_on_excerpts'] == 'on' )
+                    add_action( 'the_excerpt', array( &$this, 'add_fblike' ) );
+            }
 
             # show on individual pages?
             if( is_page() && isset( $this->options['show_on_pages'] ) && $this->options['show_on_pages'] == 'on' )
-                add_action( 'the_content', array( &$this, 'add_fblike' ) );
+            {
+                add_filter( 'the_content', array( &$this, 'add_fblike' ) );
+
+                # excerpts?
+                if( isset( $this->options['show_on_excerpts'] ) && $this->options['show_on_excerpts'] == 'on' )
+                    add_action( 'the_excerpt', array( &$this, 'add_fblike' ) );
+            }
 
             # show on individual posts?
             if( is_single() && isset( $this->options['show_on_posts'] ) && $this->options['show_on_posts'] == 'on' )
-                add_action( 'the_content', array( &$this, 'add_fblike' ) );
+            {
+                add_filter( 'the_content', array( &$this, 'add_fblike' ) );
+
+                # excerpts?
+                if( isset( $this->options['show_on_excerpts'] ) && $this->options['show_on_excerpts'] == 'on' )
+                    add_action( 'the_excerpt', array( &$this, 'add_fblike' ) );
+            }
+
+            # show on search?
+            if( is_search() && isset( $this->options['show_on_search'] ) && $this->options['show_on_search'] == 'on' )
+            {
+                add_filter( 'the_content', array( &$this, 'add_fblike' ) );
+
+                # excerpts?
+                if( isset( $this->options['show_on_excerpts'] ) && $this->options['show_on_excerpts'] == 'on' )
+                    add_action( 'the_excerpt', array( &$this, 'add_fblike' ) );
+            }
+
+            # show on archives?
+            if( is_archive() && isset( $this->options['show_on_archives'] ) && $this->options['show_on_archives'] == 'on' )
+            {
+                add_filter( 'the_content', array( &$this, 'add_fblike' ) );
+
+                # excerpts?
+                if( isset( $this->options['show_on_excerpts'] ) && $this->options['show_on_excerpts'] == 'on' )
+                    add_action( 'the_excerpt', array( &$this, 'add_fblike' ) );
+            }
 
             return $posts;
         }
