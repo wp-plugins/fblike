@@ -3,7 +3,7 @@ Contributors: ansimation
 Tags: facebook, social, fb, recommend, like, share, facebook like, open graph, opengraph, like button, fb like, facebook share
 Requires at least: 2.9
 Tested up to: 3.0
-Stable tag: 1.2
+Stable tag: 1.3
 Donate Link: http://www.visitfloridastateparks.com/donate/
 
 
