@@ -3,7 +3,7 @@ Contributors: ansimation
 Tags: facebook, social, fb, recommend, like, share, facebook like, open graph, opengraph, like button, fb like, facebook share
 Requires at least: 2.9
 Tested up to: 3.0
-Stable tag: 1.3
+Stable tag: 1.3.1
 Donate Link: http://www.visitfloridastateparks.com/donate/
 
 
@@ -37,6 +37,9 @@ By default, the container css is set to a height of 25 pixels. Change this to 13
 Check that your theme calls wp_footer() or do_action('wp_footer') and that you have entered a valid App ID on the plugin options page.
 
 == Changelog ==
+
+=1.3.1=
+* Typo in font list that caused Lucida Grande to not be reselected in the admin. Minor update it still worked just fine.
 
 = 1.3 =
 * Added option to display on search results page

@@ -44,7 +44,7 @@
                 <td>
                     <select name="fblike[font]" id="font">
                         <option value="arial"<?php selected('arial', $options['font'] ); ?>>Arial</option>
-                        <option value="lucida grande"<?php selected('lucide grande', $options['font'] ); ?>>Lucida Grande</option>
+                        <option value="lucida grande"<?php selected('lucida grande', $options['font'] ); ?>>Lucida Grande</option>
                         <option value="segoe ui"<?php selected('segoe ui', $options['font'] ); ?>>Segoe UI</option>
                         <option value="tahoma"<?php selected('tahoma', $options['font'] ); ?>>Tahoma</option>
                         <option value="trebuchet ms"<?php selected('trebuchet ms', $options['font'] ); ?>>Trebuchet MS</option>

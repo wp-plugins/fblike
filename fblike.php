@@ -6,7 +6,7 @@
      *  Plugin URI: http://travisballard.com/wordpress/fblike-wordpress-plugin/
      *  Author: Travis Ballard
      *  Author URI: http://www.travisballard.com
-     *  Version: 1.3
+     *  Version: 1.3.1
      */
 
     /**
@@ -276,7 +276,7 @@
             global $post;
 
             # return if disabled
-            if( $this->options['disabled'] == 'on' ) return $content;
+            if( isset( $this->options['disabled'] ) && $this->options['disabled'] == 'on' ) return $content;
 
             $fblike = $this->generate_output(
                 $this->options['layout_style'],
