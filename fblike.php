@@ -6,7 +6,7 @@
      *  Plugin URI: http://travisballard.com/wordpress/fblike-wordpress-plugin/
      *  Author: Travis Ballard
      *  Author URI: http://www.travisballard.com
-     *  Version: 1.3.1
+     *  Version: 1.3.2
      */
 
     /**
@@ -238,7 +238,7 @@
                 $fblike = sprintf(
                     '<div class="fblike"%s><iframe src="http://www.facebook.com/plugins/like.php?href=%s&amp;layout=%s&amp;show_faces=%s&amp;width=%d&amp;action=%s&amp;font=%s&amp;colorscheme=%s" scrolling="no" frameborder="0" allow Transparency="true" style="border:none; overflow:hidden; width:%dpx;"></iframe></div>',
                     $style,
-                    urlencode( get_permalink( $post->ID ) ),
+                    urlencode( add_filter( 'fblike_permalink', get_permalink( $post->ID ) ) ),
                     $layout_style,
                     $show_faces ? 'true' : 'false',
                     $width,
@@ -253,7 +253,7 @@
                 $fblike = sprintf(
                     '<div class="fblike"%s><fb:like href="%s" layout="%s" show_faces="%s" width="%d" action="%s" font="%s" colorscheme="%s" /></div>',
                     $style,
-                    urlencode( get_permalink( $post->ID ) ),
+                    urlencode( add_filter( 'fblike_permalink', get_permalink( $post->ID ) ) ),
                     $layout_style,
                     $show_faces ? 'true' : 'false',
                     $width,
