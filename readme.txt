@@ -3,7 +3,7 @@ Contributors: ansimation
 Tags: facebook, social, fb, recommend, like, share, facebook like, open graph, opengraph, like button, fb like, facebook share
 Requires at least: 2.9
 Tested up to: 3.1
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 Donate Link: http://www.visitfloridastateparks.com/donate/
 
 
@@ -37,6 +37,9 @@ By default, the container css is set to a height of 25 pixels. Change this to 13
 Check that your theme calls wp_footer() or do_action('wp_footer') and that you have entered a valid App ID on the plugin options page.
 
 == Changelog ==
+
+= 1.3.3 =
+* 1.3.2 used add_filter instead of apply_filters causing the plugin not to function, this fixes that.
 
 = 1.3.2 =
 * Added fblike_permalink filter so that 3rd parties can change the url for a post. example: shortening with a bit.ly url instead to track clicks.
